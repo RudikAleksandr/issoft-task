@@ -1,8 +1,11 @@
 import ReactDOM from 'react-dom';
+import App from './components/App';
+import ErrorBoundary from './components/ErrorBoundary';
 import './index.scss';
-import App from './App';
 
 ReactDOM.render(
-  <App />,
+  <ErrorBoundary>
+    <App />
+  </ErrorBoundary>,
   document.getElementById('root'),
 );
