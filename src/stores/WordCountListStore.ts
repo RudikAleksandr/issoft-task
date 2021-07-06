@@ -43,7 +43,7 @@ export default new WordCountListStore(
   [
     new WordCountStore('Words start with the letter', `^${PLACE_INSERT_WORD}.`),
     new WordCountStore('Words end with the letter', `.${PLACE_INSERT_WORD}$`),
-    new WordCountStore('Words containing the letter', `${PLACE_INSERT_WORD}${PLACE_INSERT_WORD}`),
+    new WordCountStore('Words containing the letter', `${PLACE_INSERT_WORD}`),
     new WordCountStore('Words containing letter repetition', `${PLACE_INSERT_WORD}${PLACE_INSERT_WORD}`),
   ],
 );
