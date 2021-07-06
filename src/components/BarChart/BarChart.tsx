@@ -3,7 +3,7 @@ import {
 } from '@devexpress/dx-react-chart-bootstrap4';
 import '@devexpress/dx-react-chart-bootstrap4/dist/dx-react-chart-bootstrap4.css';
 import { Animation } from '@devexpress/dx-react-chart';
-import { FC, memo, ReactElement } from 'react';
+import { FC, ReactElement } from 'react';
 
 type Props = {
   title: string;
@@ -13,7 +13,7 @@ type Props = {
   }[];
 };
 
-const BarChart: FC<Props> = memo(({ title, data }: Props): ReactElement => (
+const BarChart: FC<Props> = ({ title, data }: Props): ReactElement => (
   <div className="card w-100">
     <Chart
       rotated
@@ -29,6 +29,6 @@ const BarChart: FC<Props> = memo(({ title, data }: Props): ReactElement => (
       <Animation />
     </Chart>
   </div>
-));
+);
 
 export default BarChart;

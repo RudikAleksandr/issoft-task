@@ -7,14 +7,12 @@ type Props = {
 };
 const SpinnerLoader: FC<Props> = (({ isLoading, children }: Props): ReactElement => (
   <StyledWrapper>
-    {isLoading ? (
-      <>
-        {children}
-        <StyledSpinnerContainer>
-          <StyledSpinner animation="border" variant="secondary" />
-        </StyledSpinnerContainer>
-      </>
-    ) : children}
+    {children}
+    {isLoading && (
+      <StyledSpinnerContainer>
+        <StyledSpinner animation="border" variant="secondary" />
+      </StyledSpinnerContainer>
+    )}
   </StyledWrapper>
 ));
 
